@@ -17,11 +17,20 @@ TRANSLATION_FEED_ATOM = None
 
 # Blogroll
 LINKS =  (('Twitter', 'https://twitter.com/DoubleMalt'),
-          ('Github', 'https://github.com/DoubleMalt'),)
+          ('Github', 'https://github.com/DoubleMalt'),
+          ('cloudfleet.io', 'https://cloudfleet.io'),
+          )
 
 THEME = u'pelican-distiguishable-from-magic'
 
+AUTHOR_BIO = (u'Every technology distinguishable ' 
+              u'from magic is not advanced enough  '
+              u'<br><br>'
+              u'Musings about technology and freedom by the founder of' 
+              u'<a href="https://cloudfleet.io/">cloudfleet.io</a>')
+
 DEFAULT_PAGINATION = False
+GAUGES_ANALYTICS = u'5394eb57eddd5b055a006636'
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
