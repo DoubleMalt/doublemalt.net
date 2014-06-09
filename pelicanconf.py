@@ -26,7 +26,7 @@ THEME = u'pelican-distiguishable-from-magic'
 AUTHOR_BIO = (u'Every technology distinguishable ' 
               u'from magic is not advanced enough  '
               u'<br><br>'
-              u'Musings about technology and freedom by the founder of' 
+              u'Musings about technology and freedom by the founder of ' 
               u'<a href="https://cloudfleet.io/">cloudfleet.io</a>')
 
 DEFAULT_PAGINATION = False
