@@ -17,12 +17,12 @@ any big backbone provider. The SMTP protocol was developed in happier days when
 all email was used for was the free exchange of scientific research.
 
 Open trucks got the job done and nobody cared about envelopes. Some people got 
-worried about this and devised a [standard](https://tools.ietf.org/html/rfc3207) 
+worried about this and devised a [standard][ietf]
 that gave the sender the possibility to send the postcard in a sealed truck.
 
 Using this method the sender could make sure that not everyone on the highway 
 could read the postcards. However a recent 
-[study](http://www.cnet.com/news/how-web-mail-providers-leave-door-open-for-nsa-surveillance/)
+[study][cnet]
 showed how few mail providers made use of even this basic protection.
 
 Of course even with mail servers using opportunistic encryption in there 
@@ -48,7 +48,16 @@ complicated to use.
 
 ## The User's Perspective: Don't Bother Me!
 
+In 1883 a Dutch professor of linguistics wrote [two articles on cryptography][kerckhoff]
+that would revolutionize the field. In them he outline 6 design principles for 
+military ciphers. And while the second one was promoted (and justifiedly so) to
+be known as THE [Kerckhoffs's principle][wikipedia]
+the sixth is probably as important.
 
+According to Kerckhoff's sixth principle "it is necessary, given the 
+circumstances that command its application, that the system be easy to use, 
+requiring neither mental strain nor the knowledge of a long series of rules to 
+observe." In short, it should Work Like Magic
 
 
 
@@ -57,3 +66,12 @@ complicated to use.
 ## The Way Ahead: We Need Infrastructure
 
 ## Conclusion: Magic Is A Lot Of Work
+
+
+
+## References
+
+[ietf]: https://tools.ietf.org/html/rfc3207 "SMTP over TLS"
+[cnet]: http://www.cnet.com/news/how-web-mail-providers-leave-door-open-for-nsa-surveillance/
+[kerckhoff]: http://petitcolas.net/fabien/kerckhoffs/ "Kerckhoff's papers"
+[wikipedia]: https://en.wikipedia.org/wiki/Kerckhoffs's_principle "Kerckhoffs's principle"
