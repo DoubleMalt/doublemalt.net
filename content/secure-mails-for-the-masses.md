@@ -3,7 +3,7 @@ Date: 2014-06-12 19:03
 Category: security
 Tags: security, pgp, mail
 Slug: secure-email-for-the-masses-1
-Status: Draft
+Status: draft
 
 ## TL;DR
 
@@ -23,7 +23,7 @@ of the recipient had the possibility to read and analyze the content.
 
 Massive amounts of corporate, national and personal secrets were accessible by 
 any big backbone provider. The SMTP protocol was developed in happier days when 
-all email was used for was the free exchange of scientific research.
+all email was used for the free exchange of scientific research.
 
 Open trucks got the job done and nobody cared about envelopes. Some people got 
 worried about this and devised a [standard][ietf] that gave the sender the 
@@ -33,7 +33,7 @@ Using this method the sender could make sure that not everyone on the highway
 could read the postcards. However a recent [study][cnet] showed how few mail 
 providers made use of even this basic protection.
 
-Of course even with mail servers using opportunistic encryption in there 
+Of course even with mail servers using opportunistic encryption in their 
 communication among each other, there was this glaring hole. The receiving mail 
 server had access to the complete communication. Interested parties could 
 therefore learn the contents of a conversation by bribing or strong arming the 
@@ -41,16 +41,16 @@ mail provider. Worse, on the servers of big mail providers like Gmail, Hotmail
 and others, the complete mail history is accessible and an be retrieved using 
 this tactic. At least the NSA and the FBI chose to do so in many circumstances.
 
-A prominent victim of these insecure practices was ironically the CIA director 
-General Petraeus, whose indiscretions came to light because of the never 
+A prominent victim of these insecure practices was ironically the [CIA director 
+General Petraeus][petraeus], whose indiscretions came to light because of the never 
 forgetting archive of Gmail.
 
 Of course these deficiencies did not go unnoticed. Already in 1991 (before the 
 invention of sealed trucks), the digital equivalent to an envelope was 
-developed, PGP. Even better than an envelope PGP, based on strong asymmetric 
+developed, PGP. Even better than an envelope, PGP, based on strong asymmetric 
 encryption could guarantee that only the intended receiver of a message would 
 be able to read it. It also introduced a way of signing the message, ensuring 
-integrity and certifying the origin. These advantage however came at a 
+integrity and certifying the origin. These advantages however came at a 
 fundamental disadvantage that would lead to our current woes. It was incredibly
 complicated to use.
 
@@ -58,8 +58,8 @@ complicated to use.
 
 In 1883 a Dutch professor of linguistics wrote 
 [two articles on cryptography][kerckhoff] that would revolutionize the field. 
-In them he outline 6 design principles for military ciphers. And while the 
-second one was promoted (and justifiedly so) to be known as THE 
+He outlined 6 design principles for military ciphers. And while the second one 
+was promoted (and justifiedly so) to be known as THE 
 [Kerckhoffs's principle][wikipedia] the sixth is probably as important.
 
 According to _Kerckhoff's sixth principle_ "it is necessary, given the 
@@ -67,8 +67,8 @@ circumstances that command its application, that the system be easy to use,
 requiring neither mental strain nor the knowledge of a long series of rules to 
 observe." In short, it should _Work Like Magic&trade;_.
 
-Unfortunately PGP is everything else. This is the normal workflow of writing an   
-email:
+Unfortunately PGP does anything but. This is the normal workflow of writing 
+an email:
 
 1. Select recipient
 2. Write email
@@ -87,7 +87,7 @@ message would be something like this.
  7. Find out if this key can be trusted
  8. Find out how to import this key into your tool
  9. Write mail
-10. Find out what signing you email means
+10. Find out what signing your email means
 11. Sign and encrypt your email
 12. Hit Send 
 
@@ -101,10 +101,7 @@ down the workflow for sending PGP mail to the original three steps, select
 recipient, write email and hit send.
 
 
-## The Way Ahead: Moving Rock At A Time
-
-Some of the steps necessary for email encryption are easier to solve than 
-others. 
+## The Way Ahead: Moving One Rock At A Time
 
 ### Make Encrypted Email The Default
 
@@ -119,7 +116,7 @@ Google is starting a laudable effort by creating [End-To-End][google-end-to-end]
 but this is not enough. Encryption must be baked in. This will be hard to do 
 in webmail clients with any sort of strong security guarantee, but it is 
 critical for secure email to succeed. Initiatives like [Mailpile][mailpile] and
-[cloudfleet][cloudfleet] that builds on it will hopefully lead the way. 
+[cloudfleet][cloudfleet] will hopefully lead the way. 
 
 ### Make Encryption Transparent For The User
 
@@ -163,9 +160,12 @@ to the appropriate private key we can safely blacklist it.
 
 ### Automatically Sign And Encrypt
 
-When we arrived we only have some technical obstacles to master. But these are 
-the easiest part. The encrypting and signing of the written email can now be
-done by our PGP aware email client. Secure email FTW!  
+At this point all that is left for us to remove from the user's workflow is the 
+encrypting and signing of the message. As we established in the above, the user 
+will need a mail client that uses PGP by default. If all the other 
+additional steps are automated the mail client should be in possession of 
+everything it needs: The private key of the sender to sign the message and the 
+public key of the recipient to encrypt it. Doing this can be triggered by the user hitting the send button Secure email FTW!  
 
 
 ## Conclusion: Magic Is A Lot Of Work
@@ -181,6 +181,7 @@ will not generally solve the problem.
 
 [ietf]: https://tools.ietf.org/html/rfc3207 "SMTP over TLS"
 [cnet]: http://www.cnet.com/news/how-web-mail-providers-leave-door-open-for-nsa-surveillance/
+[petraeus]: http://swampland.time.com/2012/11/15/spyfall/ "Petraeus' Fall"
 [kerckhoff]: http://petitcolas.net/fabien/kerckhoffs/ "Kerckhoff's papers"
 [wikipedia]: https://en.wikipedia.org/wiki/Kerckhoffs's_principle "Kerckhoffs's principle"
 [google-end-to-end]: https://code.google.com/p/end-to-end/ "Google's PGP browser extension"
