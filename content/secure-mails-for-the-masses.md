@@ -21,12 +21,38 @@ worried about this and devised a [standard](https://tools.ietf.org/html/rfc3207)
 that gave the sender the possibility to send the postcard in a sealed truck.
 
 Using this method the sender could make sure that not everyone on the highway 
-could read the postcards. However 
-A recent 
+could read the postcards. However a recent 
 [study](http://www.cnet.com/news/how-web-mail-providers-leave-door-open-for-nsa-surveillance/)
-showed how few 
+showed how few mail providers made use of even this basic protection.
+
+Of course even with mail servers using opportunistic encryption in there 
+communication among each other, there was this glaring hole. The receiving mail 
+server had access to the complete communication. Interested parties could 
+therefore learn the contents of a conversation by bribing or strong arming the 
+mail provider. Worse, on the servers of big mail providers like Gmail, Hotmail 
+and others, the complete mail history is accessible and an be retrieved using 
+this tactic. At least the NSA and the FBI chose to do so in many circumstances.
+
+A prominent victim of these insecure practices was ironically the CIA director 
+General Petraeus, whose indiscretions came to light because of the never 
+forgetting archive of Gmail.
+
+Of course these deficiencies did not go unnoticed. Already in 1991 (before the 
+invention of sealed trucks), the digital equivalent to an envelope was 
+developed, PGP. Even better than an envelope PGP, based on strong asymmetric 
+encryption could guarantee that only the intended receiver of a message would 
+be able to read it. It also introduced a way of signing the message, ensuring 
+integrity and certifying the origin. These advantage however came at a 
+fundamental disadvantage that would lead to our current woes. It was incredibly
+complicated to use.
 
 ## The User's Perspective: Don't Bother Me!
+
+
+
+
+
+
 
 ## The Way Ahead: We Need Infrastructure
 
