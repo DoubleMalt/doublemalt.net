@@ -16,8 +16,8 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Twitter', 'https://twitter.com/DoubleMalt'),
-          ('Github', 'https://github.com/DoubleMalt'),
+LINKS =  (('Doublemalt @ Twitter', 'https://twitter.com/DoubleMalt'),
+          ('DoubleMalt @ Github', 'https://github.com/DoubleMalt'),
           ('cloudfleet.io', 'https://cloudfleet.io'),
           )
 
