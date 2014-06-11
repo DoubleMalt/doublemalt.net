@@ -1,14 +1,17 @@
-Title: Secure Messaging for The Masses - Towards A Magical PGP Workflow
+Title: Secure Email For The Masses - Towards A Magical PGP Workflow - Part 1
 Date: 2014-06-12 19:03
 Category: security
 Tags: security, pgp, mail
-Slug: secure-messaging-for-the-masses
+Slug: secure-email-for-the-masses-1
+Status: Draft
 
-## tl;dr
+## TL;DR
 
 PGP encryption of emails is to cumbersome for global adoption. We need a 
 workflow that magically enhances email communication with PGP (or similar) if 
-the possibility is there.
+the possibility is there. In this post I will outline the obstacles on the way
+to secure email for everyone. I will follow up with posts containing detailed 
+and concrete suggestions on how get rid of them
 
 ## The State of Affairs: Sorry
 
@@ -98,9 +101,80 @@ down the workflow for sending PGP mail to the original three steps, select
 recipient, write email and hit send.
 
 
-## The Way Ahead: We Need Infrastructure
+## The Way Ahead: Moving Rock At A Time
+
+Some of the steps necessary for email encryption are easier to solve than 
+others. 
+
+### Make Encrypted Email The Default
+
+As a solution to steps one to three people usually call for educating the user. 
+I disagree. Strongly. Everyone who created user facing software for a while 
+recognizes at some point that sane defaults are by orders of magnitude more 
+important than configuration options. We will not succeed by educating users 
+to do something really cumbersome. PGP encryption has to be present and the 
+default everywhere, from the Gmail web interface to the Thunderbird mail client.
+
+Google is starting a laudable effort by creating [End-To-End][google-end-to-end]
+but this is not enough. Encryption must be baked in. This will be hard to do 
+in webmail clients with any sort of strong security guarantee, but it is 
+critical for secure email to succeed. Initiatives like [Mailpile][mailpile] and
+[cloudfleet][cloudfleet] that builds on it will hopefully lead the way. 
+
+### Make Encryption Transparent For The User
+
+Step 4 must then be done by the mail client of your choice. Users do not need 
+to know how the encryption works like car drivers do not need to know the 
+internal workings of an airbag. It just has to be there and do its job.
+
+A keypair will be created, and shared on keyservers. There are some hard 
+problems to solve though. 
+
+How will the key pair be shared between different devices? With Mailpile and 
+cloudfleet this is not a problem, but the vast majority of users will need a 
+different solution.
+
+How will the key be verified and signed by others? Again we don't want to 
+require the user to do any out-of-band communication initially, which is the 
+only way to establish identity beyond reasonable doubt. 
+
+### Discover And Verify The Recipient's Key
+
+There exists already a keyserver infrastructure. However not all keys are on 
+each keyserver and the APIs to query a key associated with a specific email 
+address are cumbersome (or even require a Captcha).
+
+We need a clearing house for all published PGP keys, preferably a decentralized 
+one. A great use case for a DHT or a blockchain.
+
+How do we verify that the key we received really belongs to the person we want 
+to contact? The traditional PGP way is the web of trust. People sign the keys 
+of other people when they know the keys are associated with the right person.
+And if there is a trusted path from you to the key, then you can trust it. 
+Another method is publishing the key's fingerprint on a public site. However 
+this assumes that you can trust that the person in possession of the key is also 
+in full control of the website where the fingerprint was published. Also there 
+is no standardized way to  discover this.
+
+Still even a mail encrypted with an untrusted key is not worse than a mail sent 
+in plain text. And if the recipient responds by professing not to have access 
+to the appropriate private key we can safely blacklist it.
+
+
+### Automatically Sign And Encrypt
+
+When we arrived we only have some technical obstacles to master. But these are 
+the easiest part. The encrypting and signing of the written email can now be
+done by our PGP aware email client. Secure email FTW!  
+
 
 ## Conclusion: Magic Is A Lot Of Work
+
+Almost all of the problems laid out above are hard. And the grail of secure 
+email for everyone needs all of them obliterated. This will be a lot of work. 
+But we can start moving a rock at a time, knowing that the intermediate steps 
+will not generally solve the problem. 
+
 
 
 
@@ -109,3 +183,6 @@ recipient, write email and hit send.
 [cnet]: http://www.cnet.com/news/how-web-mail-providers-leave-door-open-for-nsa-surveillance/
 [kerckhoff]: http://petitcolas.net/fabien/kerckhoffs/ "Kerckhoff's papers"
 [wikipedia]: https://en.wikipedia.org/wiki/Kerckhoffs's_principle "Kerckhoffs's principle"
+[google-end-to-end]: https://code.google.com/p/end-to-end/ "Google's PGP browser extension"
+[mailpile]: https://mailpile.is/
+[cloudfleet]: https://cloudfleet.io/
