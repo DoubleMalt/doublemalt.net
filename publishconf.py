@@ -17,6 +17,7 @@ FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
+GAUGES_ANALYTICS = u'5394eb57eddd5b055a006636'
 
 # Following items are often useful when publishing
 

@@ -31,7 +31,8 @@ AUTHOR_BIO = (u'Every technology distinguishable '
               u'<a href="https://cloudfleet.io/">cloudfleet.io</a>')
 
 DEFAULT_PAGINATION = False
-GAUGES_ANALYTICS = u'5394eb57eddd5b055a006636'
+TYPOGRIFY = True
+
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

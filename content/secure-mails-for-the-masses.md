@@ -165,7 +165,8 @@ encrypting and signing of the message. As we established in the above, the user
 will need a mail client that uses PGP by default. If all the other 
 additional steps are automated the mail client should be in possession of 
 everything it needs: The private key of the sender to sign the message and the 
-public key of the recipient to encrypt it. Doing this can be triggered by the user hitting the send button Secure email FTW!  
+public key of the recipient to encrypt it. Doing this can be triggered by the 
+user hitting the send button. Secure email FTW!  
 
 
 ## Conclusion: Magic Is A Lot Of Work
