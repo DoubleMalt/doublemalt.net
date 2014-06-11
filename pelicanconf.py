@@ -7,6 +7,7 @@ SITENAME = u'Distinguishable from Magic'
 SITEURL = ''
 
 TIMEZONE = 'Europe/Paris'
+LOCALE = 'en_US'
 
 DEFAULT_LANG = u'en'
 
@@ -32,6 +33,7 @@ AUTHOR_BIO = (u'Every technology distinguishable '
 
 DEFAULT_PAGINATION = False
 TYPOGRIFY = True
+WITH_FUTURE_DATES = False
 
 
 # Uncomment following line if you want document-relative URLs when developing
