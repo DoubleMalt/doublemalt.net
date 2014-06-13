@@ -4,7 +4,6 @@ Category: security
 Tags: security, pgp, mail
 Slug: secure-email-for-the-masses-1
 
-
 ## TL;DR
 
 PGP encryption of emails is to cumbersome for global adoption. We need a 
@@ -96,6 +95,7 @@ the non-technical user. Of course some of the steps might only be necessary the
 first time, but that doesn't matter. The mountain range is high enough that 
 only a select few high-energy individuals will make it to the other side.
 
+The [email self defense tutorial][email-self-defense] by the FSF is a good start, but not enough.
 To enable mass adoption of secure messaging, we have to make it possible to cut 
 down the workflow for sending PGP mail to the original three steps: select 
 recipient, write email and hit send.
@@ -186,6 +186,7 @@ will not generally solve the problem.
 [petraeus]: http://swampland.time.com/2012/11/15/spyfall/ "Petraeus' Fall"
 [kerckhoff]: http://petitcolas.net/fabien/kerckhoffs/ "Kerckhoff's papers"
 [wikipedia]: https://en.wikipedia.org/wiki/Kerckhoffs's_principle "Kerckhoffs's principle"
+[email-self-defense]: https://emailselfdefense.fsf.org/ "Email Self-Defense"
 [google-end-to-end]: https://code.google.com/p/end-to-end/ "Google's PGP browser extension"
 [mailpile]: https://mailpile.is/
 [cloudfleet]: https://cloudfleet.io/
