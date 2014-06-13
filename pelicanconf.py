@@ -17,17 +17,15 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Blogroll
-LINKS =  (('Doublemalt @ Twitter', 'https://twitter.com/DoubleMalt'),
-          ('DoubleMalt @ Github', 'https://github.com/DoubleMalt'),
-          ('cloudfleet.io', 'https://cloudfleet.io'),
+LINKS =  (('cloudfleet.io', 'https://cloudfleet.io'),
+          ('<i class="fa fa-twitter" title="@DoubleMalt"></i>', 'https://twitter.com/DoubleMalt'),
+          ('<i class="fa fa-github" title="@DoubleMalt"></i>', 'https://github.com/DoubleMalt'),
           )
 
 THEME = u'pelican-distiguishable-from-magic'
-
-AUTHOR_BIO = (u'Every technology distinguishable ' 
-              u'from magic is not advanced enough  '
-              u'<br><br>'
-              u'Musings about science, technology and freedom '
+TAGLINE = (u'Every technology distinguishable ' 
+           u'from magic is not advanced enough')
+AUTHOR_BIO = (u'Musings about science, technology and freedom '
               u'by the founder of ' 
               u'<a href="https://cloudfleet.io/">cloudfleet.io</a>')
 
