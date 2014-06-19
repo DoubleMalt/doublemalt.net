@@ -30,6 +30,7 @@ AUTHOR_BIO = (u'Musings about science, technology and freedom '
               u'<a href="https://cloudfleet.io/">cloudfleet.io</a>')
 
 DEFAULT_PAGINATION = False
+SUMMARY_MAX_LENGTH = 64
 TYPOGRIFY = True
 WITH_FUTURE_DATES = False
 
