@@ -1,8 +1,9 @@
 Title: Secure Email For The Masses - Towards A Magical PGP Workflow - Part 1
-Date: 2014-06-13 02:30
+Date: 2014-06-16 09:30
 Category: security
 Tags: security, pgp, mail
 Slug: secure-email-for-the-masses-1
+Ycombinatorid: 7898406
 
 ## TL;DR
 
